@@ -1,8 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./Home";
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const [trips, setTrips] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    fetch('http://localhost:9292/')
+      .then((r) => r.json())
+      .then((trip) => setTrips(trip));
+  }, []);
+
+  console.log(trips)
+
   return (
     <div className="App">
       <header className="App-header">
