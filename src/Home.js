@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Search from './Search';
+import TripList from './TripList';
 
 function Home() {
 
@@ -21,8 +22,16 @@ function Home() {
     <div>
       Welcome To TripFinder!
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      <ul>
+        {filteredTrips.map((trip) =>
+        <TripList
+          key={trip.id}
+          trip={trip}
+        />
+          )}
+      </ul>
     </div>
-  )
+  );
 }
 
 export default Home;
