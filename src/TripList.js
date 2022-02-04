@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function TripList({ trip }) {
   return(
     <ul>
-      <h4>{trip.location}</h4>
+      <Link to="/{:trip.id}">{trip.location}</Link>
     </ul>
   )
 }
