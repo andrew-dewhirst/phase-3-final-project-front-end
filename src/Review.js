@@ -13,16 +13,16 @@ function Review() {
   }, []);
 
   const params = useParams()
-  console.log(params.id)
   console.log(reviews)
 
-  const locationReview = reviews.filter((review) => review.trip_id === params.id)
+  const locationReview = reviews.filter((review) => review.trip_id == params.id)
   console.log(locationReview)
+ 
 
   return(
     <div>
       <ul>
-        {reviews.map((review) =>
+        {locationReview.map((review) =>
         <ReviewList
           key={review.id}
           review={review}
