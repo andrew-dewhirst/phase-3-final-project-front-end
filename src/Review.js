@@ -13,11 +13,8 @@ function Review() {
   }, []);
 
   const params = useParams()
-  console.log(reviews)
 
-  const locationReview = reviews.filter((review) => review.trip_id == params.id)
-  console.log(locationReview)
- 
+  const locationReview = reviews.filter((review) => review.trip_id == params.id) 
 
   return(
     <div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function TripList({ trip }) {
   return(
     <ul>
-      <Link to={`/${trip.id}`}>{trip.location}</Link>
+      <Link to={`/reviews/${trip.id}`}>{trip.location}</Link>
     </ul>
   )
 }

@@ -16,8 +16,6 @@ function Home() {
 
   const filteredTrips = trips.filter((trip) => trip.location.toLowerCase().includes(searchTerm.toLowerCase()));
 
-  console.log(filteredTrips)
-
   return (
     <div>
       Welcome To TripFinder!
