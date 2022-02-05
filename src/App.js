@@ -5,14 +5,25 @@ import Review from "./Review";
 
 function App() {
 
+  const [trips, setTrips] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    fetch('http://localhost:9292/trips')
+      .then((r) => r.json())
+      .then((trip) => setTrips(trip));
+  }, []);
+
+  const filteredTrips = trips.filter((trip) => trip.location.toLowerCase().includes(searchTerm.toLowerCase()));
+
   return (
     <Router>
       <Switch>
         <Route exact path='/'>
-          <Home />
+          <Home filteredTrips={filteredTrips} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
         </Route>
         <Route exact path='/reviews/:id'>
-          <Review />
+          <Review trips={trips}/>
         </Route>
       </Switch>
     </Router>

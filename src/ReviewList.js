@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
 
-function ReviewList({ review }) {
-  return(
-    <ul>
-      <h4>{review.activities_completed}</h4>
-    </ul>
-  )
+function ReviewList({ trip, reviews }) {
+
+  console.log(reviews)
+
+  return (
+    <div>
+      <h3>{trip.location}</h3>
+      {reviews.map((review) => (
+          <ul key={review.id}>{review.activities_completed}</ul>
+      ))}
+    </div>
+  );
 }
 
 export default ReviewList;
