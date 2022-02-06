@@ -22,8 +22,11 @@ function Review({ trips }) {
 
   function handleReviewDelete() {
     console.log("Deleted!")
-
   }
+
+  function handleNewReview(newReview) {
+    setReviews([...reviews, newReview])
+  };
 
   return(
     <div>
@@ -37,7 +40,7 @@ function Review({ trips }) {
           />
           )}
       </ul>
-      <NewReviewForm />
+      <NewReviewForm handleNewReview={handleNewReview}/>
     </div>
   )
 }
