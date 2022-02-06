@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 function ReviewList({ trip, reviews, handleReviewDelete }) {
 
   console.log(trip)
-  console.log(reviews)
 
   return(
     <div>
