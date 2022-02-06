@@ -8,6 +8,10 @@ function Review({ trips }) {
 
   const locationReview = trips.filter((trip) => trip.id == params.id) 
 
+  function handleReviewDelete() {
+    console.log("Deleted!")
+  }
+
   return(
     <div>
       <ul>
@@ -16,6 +20,7 @@ function Review({ trips }) {
           key={trip.id}
           trip={trip}
           reviews={trip.reviews}
+          handleReviewDelete={handleReviewDelete}
           />
           )}
       </ul>
