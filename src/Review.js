@@ -18,12 +18,6 @@ function Review({ trips }) {
   const specificTrip = trips.filter((trip) => trip.id == params.id) 
   const specificReview = reviews.filter((review) => review.trip_id == params.id)
 
-  console.log(specificReview)
-
-  function handleReviewDelete() {
-    console.log("Deleted!")
-  }
-
   function handleNewReview(newReview) {
     setReviews([...reviews, newReview])
   };
@@ -36,7 +30,6 @@ function Review({ trips }) {
           key={trip.id}
           trip={trip}
           reviews={specificReview}
-          handleReviewDelete={handleReviewDelete}
           />
           )}
       </ul>

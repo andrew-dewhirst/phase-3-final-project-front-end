@@ -1,4 +1,20 @@
-# Getting Started with Create React App
+# Section 1 - TripTracker App
+
+This section will discuss the TripTracker app project and explain its functionality. See "Section 2" for more details around React.
+
+## Functionality
+
+TripTracker is an app that allows you to read and post reviews for locations all over the world. The home page displays a list of all the destinations that have at least a single review, as well as a search bar to filter for a specific location. You can click into a specific destination by clicking the location name on the home page, which will direct you to that destination's reviews page. These location-specific pages will have all the reviews for that specific location, including options to delete an existing review (will need to add functionality to only allow someone to delete their own reviews) and add a new one.
+
+## Front End
+
+The front end of TripTracker was built using React (see Section 2 for more React-specific details), and the individual Components can be found within the src folder.
+
+## Back End
+
+The back end of TripTracker was built using Sinatra. Github link can be found here - https://github.com/andrew-dewhirst/phase-3-sinatra-react-project.
+
+# Section 2 - Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

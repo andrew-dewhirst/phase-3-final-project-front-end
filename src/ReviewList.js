@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 
 function ReviewList({ trip, reviews, handleReviewDelete }) {
 
-  console.log(trip)
+  function handleReviewDelete() {
+    console.log(trip.id)
+  }
 
   return(
     <div>

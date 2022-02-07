@@ -10,7 +10,6 @@ function NewReviewForm({ handleNewReview }) {
   const [departure, setDeparture] = useState("");
 
   const params = useParams()
-  console.log(params.id)
 
   function handleActivitiesChange(event) {
     setActivities(event.target.value);

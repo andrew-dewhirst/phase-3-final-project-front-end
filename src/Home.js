@@ -5,7 +5,7 @@ import TripList from './TripList';
 function Home({ filteredTrips, searchTerm, setSearchTerm }) {
 
   return (
-    <div>
+    <div className="home">
       Welcome To TripFinder!
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
       <ul>
