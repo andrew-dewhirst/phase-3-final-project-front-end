@@ -22,6 +22,11 @@ function Review({ trips }) {
     setReviews([...reviews, newReview])
   };
 
+  function handleReviewDelete(deletedReview) {
+    const updatedReviews = reviews.filter((review) => review.id !== deletedReview)
+    setReviews(updatedReviews);
+  }
+
   return(
     <div>
       <ul>
@@ -30,6 +35,7 @@ function Review({ trips }) {
           key={trip.id}
           trip={trip}
           reviews={specificReview}
+          handleReviewDelete={handleReviewDelete}
           />
           )}
       </ul>

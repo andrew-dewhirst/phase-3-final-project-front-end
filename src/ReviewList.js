@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 
 function ReviewList({ trip, reviews, handleReviewDelete }) {
 
-  function handleReviewDelete() {
-    console.log(trip.id)
+  function handleDeleteClick(reviewId) {
+    fetch(`http://localhost:9292/reviews/${reviewId}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => handleReviewDelete(reviewId));
   }
 
   return(
@@ -15,7 +19,7 @@ function ReviewList({ trip, reviews, handleReviewDelete }) {
           <ul>Trip Comments: {review.comments}</ul>
           <ul>Review Submitted: {review.created_at.slice(0,-14)}</ul>
           <h4>Trip Rating: {review.rating}</h4>
-          <button onClick={handleReviewDelete}>Remove Review</button>
+          <button onClick= {() => handleDeleteClick(review.id)} >Remove Review</button>
         </div>
       ))}
     </div>
