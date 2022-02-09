@@ -6,9 +6,9 @@ function Home({ filteredTrips, searchTerm, setSearchTerm }) {
 
   return (
     <div className="home">
-      Welcome To TripFinder!
+      <h1>Welcome To TripFinder!</h1>
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
-      <ul>
+      <ul id="trip">
         {filteredTrips.map((trip) =>
         <TripList
           key={trip.id}
