@@ -8,7 +8,6 @@ function Search({ searchTerm, setSearchTerm }) {
 
   return (
     <div id="search">
-      <label htmlFor="search">Search Locations:</label>
       <input
         value={searchTerm}
         type="text"

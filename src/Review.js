@@ -29,7 +29,7 @@ function Review({ trips }) {
 
   return(
     <div>
-      <ul>
+      <ul id="review">
         {specificTrip.map((trip) =>
         <ReviewList
           key={trip.id}

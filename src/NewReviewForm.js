@@ -54,28 +54,28 @@ function NewReviewForm({ handleNewReview }) {
   };
 
   return(
-    <div>
+    <div className="container">
       <h3>Want to add a new review for this location?</h3>
-      <form onSubmit={handleSubmit}>
+      <form id="form" onSubmit={handleSubmit}>
         <label>
           Activities Completed:
-          <input type="text" onChange={handleActivitiesChange} value={activities} />
+          <input type="text" placeholder="Activities..." onChange={handleActivitiesChange} value={activities} />
         </label>
         <label>
           Trip Comments:
-          <input type="text" onChange={handleCommentsChange} value={comments} />
+          <input type="text" placeholder="Additional comments..." onChange={handleCommentsChange} value={comments} />
         </label>
         <label>
           Rating:
-          <input type="text" onChange={handleRatingChange} value={rating} />
+          <input type="text" placeholder="1 - 5" onChange={handleRatingChange} value={rating} />
         </label>
         <label>
           Date Arrived:
-          <input type="text" onChange={handleArrivalChange} value={arrival} />
+          <input type="text" placeholder="01/01/2022" onChange={handleArrivalChange} value={arrival} />
         </label>
         <label>
           Date Departed:
-          <input type="text" onChange={handleDepartureChange} value={departure} />
+          <input type="text" placeholder="01/08/2022" onChange={handleDepartureChange} value={departure} />
         </label>
         <button type="submit">Submit</button>
       </form>

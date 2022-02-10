@@ -11,8 +11,8 @@ function ReviewList({ trip, reviews, handleReviewDelete }) {
   }
 
   return(
-    <div>
-      <h3>Reviews: {trip.location}</h3>
+    <div className="container">
+      <h2>{trip.location}</h2>
       {reviews.map((review) => (
         <div key={review.id}>
           <ul>Activities Completed: {review.activities_completed}</ul>

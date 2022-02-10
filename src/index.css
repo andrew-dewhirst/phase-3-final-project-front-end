@@ -5,15 +5,12 @@
   outline: 0;
 }
 
-html {
+body {
   background: url("https://cdn.wallpapersafari.com/9/32/YF5sBZ.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,6 +18,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -32,18 +30,75 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  padding-bottom: 10px;
+}
+
 #search {
   display: block;
   margin: 0 auto;
+  margin-bottom: 40px;
+  margin-top: 10px;
   text-align: center;
 }
 
 #trip {
   font-weight: bold;
-  color: yellow;
   justify-content: space-evenly;
   text-align: center;
   -moz-column-count: 4;
   -webkit-column-count: 4;
   column-count: 4;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: gray;
+}
+
+#review {
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(188, 190, 27);
+  width: 30%;
+  border: 4px double #39A9DB;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  width: 75%;
+  padding: 12px 20px;
+  display: list-item;
+  border: 4px double #39A9DB;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  justify-self: center;
+  margin: auto;
+}
+
+button {
+  width: 25%;
+  background-color: #F8E2E6;
+  color: #0000FF;
+  padding: 12px 18px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
