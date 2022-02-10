@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import NavBar from "./NavBar";
 import ReviewList from "./ReviewList";
 import NewReviewForm from "./NewReviewForm";
 
@@ -29,6 +30,7 @@ function Review({ trips }) {
 
   return(
     <div>
+      <NavBar />
       <ul id="review">
         {specificTrip.map((trip) =>
         <ReviewList
