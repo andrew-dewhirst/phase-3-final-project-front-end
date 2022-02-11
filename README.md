@@ -12,7 +12,7 @@ The front end of TripTracker was built using React (see Section 2 for more React
 
 ## Back End
 
-The back end of TripTracker was built using Sinatra. Github link can be found here - https://github.com/andrew-dewhirst/phase-3-sinatra-react-project.
+The back end of TripTracker was built using Sinatra. Github link can be found here - https://github.com/andrew-dewhirst/phase-3-sinatra-react-project. Running `bundle install` will install all the gems and dependencies needed for this app. One additional gem was added to help seed the database - the Faker gem, with additional information available on the Faker gem's [Github](https://github.com/faker-ruby/faker).
 
 # Section 2 - Getting Started with Create React App
 
