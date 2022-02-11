@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function ReviewList({ trip, reviews, handleReviewDelete }) {
 
