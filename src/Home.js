@@ -14,7 +14,7 @@ function Home({ filteredTrips, searchTerm, setSearchTerm }) {
           key={trip.id}
           trip={trip}
         />
-          )}
+        )}
       </ul>
     </div>
   );

@@ -39,7 +39,7 @@ function Review({ trips }) {
           reviews={specificReview}
           handleReviewDelete={handleReviewDelete}
           />
-          )}
+        )}
       </ul>
       <NewReviewForm handleNewReview={handleNewReview}/>
     </div>
